@@ -1,0 +1,308 @@
+<body>
+  <div id="sve">
+      <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top" id="navbarac">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item"> 
+                <a class="navbar-brand" href="#"><i style="font-size:24px" class="fa">&#xf015;</i> Почетак</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#obrz" (click)="downloadPdf()" id="presijavanje" ><i style="font-size:24px" class="fa">&#xf019;</i> Преузми Образац</a> 
+              </li>
+            </ul>
+          </div>
+        </nav>
+    
+      <!-- JUMBOTRON -->
+      <div class="jumbotron" id="jumbo">
+        <br><br>
+          <h1>Наслов</h1>
+          <h6>Слатка је ствар, и пуна безлобне забаве и утешенија, спомињати сесвоји прошасти времена, од самога незлобивога детињства и веселе младости домужеског возраста и зреле старости.</h6>
+        </div>
+      
+        <!-- O NAMA -->
+      <div class="container" id="oNama">
+          <div class="row">
+              <div class="col-md-8">
+                <h3>О нама</h3>
+                <p>
+                    Слатка је ствар, и пуна безлобне забаве и утешенија, спомињати сесвоји прошасти времена, од самога незлобивога детињства и веселе младости домужеског возраста и зреле старости. Проливају очи моје слаткосрдечне сузеприпознанства и благодарности кад год размишљавам велику милост небесногпромисла, у коликим невољам ми је помогла! Од колики 6едствованија и напастејизбавила! И колико крат моје совете и намеренија, која би ми за моје неразумије инерасудије штетна и пагубна била, на добро обратила! И како чадољубива мати, заруку водећи, к добром концу довела! Љубов дружества и пријатељства —слатка ствар! Слатко име! Слатко спомињање! Чини ми се да сладост рајска довољна би мибила, такова и толика будући, колика је мојему срцу утеха и радост кад год помињемсрдечну љубов и прија|тељство моји љубезника и љубезница, благодетеља иблагодетелница. Моје исте слабости и погрешке, премда и се стидим, и од који нидо данас нисам се избавио, ползују ме кад и помињем, помажући ми да сеисправљам, колико је могуће, да ниско и смирено о себи мислим, и да друге, мениподобослабе, људе трпим и сносим.
+                </p>
+              </div>
+              <div class="col-md-3 offset-1">
+                <h3>Пратите нас на:</h3>
+                <ul id="drustveneMreze" class="row">
+                  <ul class="col-6">
+                      <li><a href="javascript:void(0)"><i style="font-size:74px" class="fa">&#xf08c;</i>  </a></li>
+                      <li><a href="javascript:void(0)"><i style="font-size:74px" class="fa">&#xf1a2;</i> </a></li>
+                      <li><a href="javascript:void(0)"><i style="font-size:74px" class="fa">&#xf082;</i> </a></li>
+                      <li><a href="javascript:void(0)"><i style="font-size:74px" class="fa">&#xf0d4;</i> </a></li>
+                  </ul>
+                  <ul class="col-6">
+                      <li><a href="javascript:void(0)"><i style="font-size:74px" class="fa">&#xf166;</i>  </a></li>
+                      <li><a href="javascript:void(0)"><i style="font-size:74px" class="fa">&#xf16d;</i> </a></li>
+                      <li><a href="javascript:void(0)"><i style="font-size:74px" class="fa">&#xf081;</i> </a></li>
+                      <li><a href="javascript:void(0)"><i style="font-size:74px" class="fa">&#xf174;</i> </a></li>
+                  </ul>
+                </ul>
+              </div>
+            </div>
+      </div>
+      
+        <!-- APP -->
+        <form id="app" #userForm="ngForm">
+          <hr>
+          <br>
+          <h1>Попуна Података</h1>
+          <br>
+            <button class="btn btn-lg btn-moje btn-block" data-toggle="collapse" data-target="#podaciObavezniku">Унос података о обвезнику</button>
+      
+            <div id="podaciObavezniku" class="collapse">
+            <br>
+              <label for="imeIprezime" id="labell">Порески обвезник:</label>
+              <input [(ngModel)]="userModel.imeIprezime" class="form-control form-control-lg" type="text" name="imeIprezime" id="imeIprezime" placeholder="Ваше име и презиме"> 
+            <br>
+            <label for="PIB" id="labell">ПИБ:</label>
+              <input [(ngModel)]="userModel.PIB" class="form-control form-control-lg" type="text" name="PIB" id="PIB" >
+            <br>
+            <div ngModelGroup="adresac">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="ulica" id="labell">Улица:</label>
+                <input [(ngModel)]="userModel.ulica" class="form-control form-control-lg" type="text" name="ulica" id="ulica" >
+              </div>
+              <div class="col-md-2">
+                <label for="broj" id="labell">Број:</label>
+                <input [(ngModel)]="userModel.broj" class="form-control form-control-lg" type="text" name="broj" id="broj" >
+              </div>
+              <div class="col-md-4">
+                <label for="grad" id="labell">Град:</label>
+                <input [(ngModel)]="userModel.grad" class="form-control form-control-lg" type="text" name="grad" id="grad">
+              </div>
+            </div>
+          </div>
+              <br>
+              <label for="opstina" id="labell">Општина:</label>
+              <select [(ngModel)]="userModel.opstina" class="form-control form-control-lg" name="opstina" id="opstina">
+                <option selected disabled>Изабери Општину</option>
+                <option value="АДА">АДА</option>
+                <option value="АЛЕКСАНДРОВАЦ">АЛЕКСАНДРОВАЦ</option>
+                <option value="АЛЕКСИНАЦ">АЛЕКСИНАЦ</option>
+                <option value="АЛИБУНАР">АЛИБУНАР</option>
+                <option value="АПАТИН">АПАТИН</option>
+                <option value="АРАНЂЕЛОВАЦ">АРАНЂЕЛОВАЦ</option>
+                <option value="АРИЉЕ">АРИЉЕ</option>
+              </select>
+            </div> 
+      
+            <button class="btn btn-lg btn-moje btn-block" data-toggle="collapse" data-target="#zahtev"> Захтев За Промену Објекта – Адресе Фискалне Касе </button>
+            <div id="zahtev" class="collapse">
+                <br>
+                <label for="eksp" id="labell">Филијали/Експозитури Пореске управе:</label>
+                <input  [(ngModel)]="userModel.eksp" class="form-control form-control-lg" type="text" name="eksp" id="eksp" placeholder="Пример: Пореска управа Мали Зворник Краља Петра 16 ">
+                <br>
+                <label for="fiskBrKase" id="labell">Идентификациони број фискалне касе:</label>
+                <input  [(ngModel)]="userModel.fiskBrKase" class="form-control form-control-lg" type="text" name="fiskBrKase" id="fiskBrKase" >
+                <br>
+                <label for="fiskMod" id="labell">Број фискалног модула:</label>
+                <input [(ngModel)]="userModel.fiskMod" class="form-control form-control-lg" type="text" name="fiskMod" id="fiskMod" >
+                <br>
+                <label for="brResh" id="labell">Број решења о фискализацији:</label>
+                <input  [(ngModel)]="userModel.brResh" class="form-control form-control-lg" type="text" name="brResh" id="brResh">
+                <br>
+                <label for="datResh" id="labell">Датум решења о фискализацији:</label>
+                <input  [(ngModel)]="userModel.datResh" class="form-control form-control-lg" type="text" name="datResh" id="datResh">
+                <br>
+            </div>
+      
+            <button class="btn btn-lg btn-moje btn-block" data-toggle="collapse" data-target="#novObj">Подаци о новом објекту – адреси фискалне касе</button>
+            <div id="novObj" class="collapse">
+                <br>
+                <label for="nazObj" id="labell">Назив објекта:</label>
+                <input [(ngModel)]="userModel.nazObj" class="form-control form-control-lg" type="text" name="nazObj" id="nazObj">
+                <br>
+                <label for="adrObj" id="labell">Адреса објекта:</label>
+                <input [(ngModel)]="userModel.adrObj" class="form-control form-control-lg" type="text" name="adrObj" id="adrObj">
+                <br>
+                <label for="mestObj" id="labell">Место објекта: </label>
+                <input [(ngModel)]="userModel.mestObj" class="form-control form-control-lg" type="text" name="mestObj" id="mestObj">
+                <br>
+                <label for="tel" id="labell">Телефони:</label>
+                <input [(ngModel)]="userModel.tel" class="form-control form-control-lg" type="text" name="tel" id="tel">
+                <br>
+                <label for="opstina2" id="labell">Општина објекта:</label>
+                <select [(ngModel)]="userModel.opstina2" class="form-control form-control-lg" name="opstina2" id="opstina2">
+                    <option selected disabled>Изабери Општину</option>
+                    <option value="АДА">АДА</option>
+                    <option value="АЛЕКСАНДРОВАЦ">АЛЕКСАНДРОВАЦ</option>
+                    <option value="АЛЕКСИНАЦ">АЛЕКСИНАЦ</option>
+                    <option value="АЛИБУНАР">АЛИБУНАР</option>
+                    <option value="АПАТИН">АПАТИН</option>
+                    <option value="АРАНЂЕЛОВАЦ">АРАНЂЕЛОВАЦ</option>
+                    <option value="АРИЉЕ">АРИЉЕ</option>
+                  </select>
+                <br>
+                <label for="odDan" id="labell">Од дана:</label>
+                <input [(ngModel)]="userModel.odDan" class="form-control form-control-lg" type="text" name="odDan" id="odDan">
+                <br>
+            </div>
+          </form>
+          </div>
+        
+  <div id="app">
+        <br>
+          <h1>Изглед Образца</h1>
+        <br>
+       <hr>
+      </div>
+      <div id="obrz" class="container"> 
+      <br>
+      <p class="float-right font-weight-bold">Образац ЗПО</p>
+      <br><br>
+      <p class="float-left font-weight-bold">Подаци о обвезнику:</p>
+      
+      <br>
+      
+      <div class="row" style="width:100%">
+        <div class="col-md-4"><p>Порески обвезник:</p></div>
+        <div class="col-md-8"><input value="{{userModel.imeIprezime}}" type="text" class="form-control form-control-sm border-1 border-top-0 border-right-0 border-left-0" style="border-bottom: 1px solid black"></div>
+        <div class="col-md-2"><p>ПИБ:</p></div>
+        <div class="col-md-10"><input value="{{userModel.PIB}}" type="text" class="form-control form-control-sm border-1 border-top-0 border-right-0 border-left-0" style="border-bottom: 1px solid black"></div>
+        <div class="col-md-2"><p>Адреса:</p></div>
+        <div class="col-md-10"><input value="{{userModel.ulica + ' ' + userModel.broj + ' ' + userModel.grad}}" type="text" class="form-control form-control-sm border-1 border-top-0 border-right-0 border-left-0" style="border-bottom: 1px solid black"></div>
+        <div class="col-md-2"><p>Општина:</p></div>
+        <div class="col-md-10"><input value="{{userModel.opstina}}" type="text" class="form-control form-control-sm border-1 border-top-0 border-right-0 border-left-0" style="border-bottom: 1px solid black"></div>
+      </div>
+      <br>
+      <h5 class="text-center font-weight-bold">ЗАХТЕВ ЗА ПРОМЕНУ ОБЈЕКТА – АДРЕСЕ ФИСКАЛНЕ КАСЕ</h5>
+      <br><br>
+      
+      <div class="row" style="width:100%">
+      
+      <div class="col-md-7"><p>Филијали/Експозитури Пореске управе:</p></div>
+      <div class="col-md-5"><input value="{{userModel.eksp}}" type="text" class="form-control form-control-sm border-1 border-top-0 border-right-0 border-left-0" style="border-bottom: 1px solid black"></div>
+      
+      <div class="col-md-12"><p>Подаци о фискалној каси:</p></div>
+      
+      <div class="col-md-7"><p>Идентификациони број фискалне касе:</p></div>
+      <div class="col-md-5"><input value="{{userModel.fiskBrKase}}" type="text" class="form-control form-control-sm border-1 border-top-0 border-right-0 border-left-0" style="border-bottom: 1px solid black"></div>
+      
+      <div class="col-md-5"><p>Број фискалног модула:</p></div>
+      <div class="col-md-7"><input value="{{userModel.fiskMod}}" type="text" class="form-control form-control-sm border-1 border-top-0 border-right-0 border-left-0" style="border-bottom: 1px solid black"></div>
+      
+      <div class="col-md-6"><p>Број решења о фискализацији:</p></div>
+      <div class="col-md-6"><input value="{{userModel.brResh}}" type="text" class="form-control form-control-sm border-1 border-top-0 border-right-0 border-left-0" style="border-bottom: 1px solid black"></div>
+      
+      <div class="col-md-6"><p>Датум решења о фискализацији:</p></div>
+      <div class="col-md-6"><input value="{{userModel.datResh}}" type="text" class="form-control form-control-sm border-1 border-top-0 border-right-0 border-left-0" style="border-bottom: 1px solid black"></div>
+      
+      <div class="col-md-12"><p class="font-weight-bold">Подаци о новом објекту – адреси фискалне касе: </p></div>
+      
+      <div class="col-md-3"><p>Назив објекта:</p></div>
+      <div class="col-md-9"><input value="{{userModel.nazObj}}" type="text" class="form-control form-control-sm border-1 border-top-0 border-right-0 border-left-0" style="border-bottom: 1px solid black"></div>
+      
+      <div class="col-md-3"><p>Адреса објекта:</p></div>
+      <div class="col-md-9"><input value="{{userModel.adrObj}}" type="text" class="form-control form-control-sm border-1 border-top-0 border-right-0 border-left-0" style="border-bottom: 1px solid black"></div>
+      
+      <div class="col-md-3"><p>Место објекта:</p></div>
+      <div class="col-md-9"><input value="{{userModel.mestObj}}" type="text" class="form-control form-control-sm border-1 border-top-0 border-right-0 border-left-0" style="border-bottom: 1px solid black"></div>
+      
+      <div class="col-md-2"><p>Телефони:</p></div>
+      <div class="col-md-10"><input value="{{userModel.tel}}" type="text" class="form-control form-control-sm border-1 border-top-0 border-right-0 border-left-0" style="border-bottom: 1px solid black"></div>
+      
+      <div class="col-md-4"><p>Општина објекта:</p></div>
+      <div class="col-md-8"><input value="{{userModel.opstina2}}" type="text" class="form-control form-control-sm border-1 border-top-0 border-right-0 border-left-0" style="border-bottom: 1px solid black"></div>
+      
+      <div class="col-md-2"><p>Од дана:</p></div>
+      <div class="col-md-10"><input value="{{userModel.odDan}}" type="text" class="form-control form-control-sm border-1 border-top-0 border-right-0 border-left-0" style="border-bottom: 1px solid black"></div>
+      </div>
+      <br><br><br><br><br>
+      
+      <div class="row">
+          <div class="col-md-4"><p class="text-left font-weight-bold">Примио радник ПУ</p></div>
+          <div class="col-md-4 offset-4"><p class="text-center font-weight-bold">Порески обвезник</p></div>
+          
+          <div class="col-md-4"><input type="text" class="form-control form-control-sm border-1 border-top-0 border-right-0 border-left-0" style="border-bottom: 2px solid black"></div>
+          <div class="col-md-4 offset-4"><input type="text" class="form-control form-control-sm border-1 border-top-0 border-right-0 border-left-0" style="border-bottom: 2px solid black"></div>
+      </div>
+      <br><br><br><br>
+      </div>
+  
+     <!-- PODFUTER -->
+     <div id="podFuter">
+        <br><hr><br>
+     <div class="row">
+    <div class="col-md-3">
+        <img [src]="LOGO" class="img-fluid" alt="logo">
+    </div>
+    
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <!-- Modal Header -->
+          <!--   <div class="modal-header">
+            </div> -->
+            <!-- Modal body -->
+            <div class="modal-body">
+                <button style="color: white;" type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Брзи Контакт</h4>
+                <br>
+              <label for="vasEmail">Ваш емаил:</label>
+                  <input class="form-control" type="text" id="vasEmail">
+                  <br>
+                  <label for="vasaPoruka">Ваша Порука:</label>
+              <textarea class="form-control" style="resize: none;" name="poruka" id="vasaPoruka" cols="30" rows="10"></textarea>
+              <br>
+              <button class="btn btn-block btn-posalji">Пошаљи</button>
+              <br>
+            </div>
+            <!-- Modal footer -->
+<!--             <div class="modal-footer">
+            </div> -->
+          </div>
+        </div>
+      </div>
+    
+    <div class="col-md-3">
+      <h6>Блог</h6>
+        <ul>
+            <li><a href="javascript:void(0);">Mashable</a></li>
+            <li><a href="javascript:void(0);">Fast Company</a></li>  
+            <li><a href="javascript:void(0);">TechCrunch</a></li>
+            <li><a href="javascript:void(0);">VentureBeat</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h6>Наши Корисници</h6>
+        <ul>
+            <li><a href="javascript:void(0);">Bureaucrat Vital</a></li>
+            <li><a href="javascript:void(0);">Biro Response</a></li>  
+            <li><a href="javascript:void(0);">Šalter Mentor</a></li>
+            <li><a href="javascript:void(0);">Brainstorm Form Filing</a></li>  
+            <li><a href="javascript:void(0);">Digital Something</a></li>
+            <li><a href="javascript:void(0);">Submit Something</a></li>
+        </ul>
+    </div>
+    <div class="col-md-3">
+        <h6>Правни Оквир</h6>
+        <ul>
+            <li><a href="javascript:void(0);">Закон о Пословању</a></li>
+            <li><a href="javascript:void(0);">Статут Фирме</a></li>
+            <li><a href="javascript:void(0);">Услови Дигиталног Пословања</a></li>  
+        </ul>
+    </div>
+     </div>
+    </div>
+    <button type="button" class="btn btn-lg btn-moje btn-block" data-toggle="modal" data-target="#myModal"><i style="font-size:24px" class="fa">&#xf1d8;</i> Брзи Контакт</button>
+     
+    <!-- PODFUTERFUTER -->
+    <div id="poPodFuter" class="row">
+      <div class="col-md-12">Made for non commercial use</div>
+    </div>
+      <!-- <router-outlet></router-outlet> -->
+</body>
